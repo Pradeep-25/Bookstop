@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Upright');
+.header {
+  
+  background: url('Books00.jpg');
+  overflow: hidden;
+ background-size:cover;
+  padding: 800px 10px;
+  padding-top: 20px;
+}
+/* Style the header links */
+.header a {
+  float: left;
+  color: white;
+ 
+ text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+ 
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: black;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+  
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+
+p{
+	color: black;
+	font-size: 25px;
+	text-align: center;
+	font-family: verdana;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 24%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.sitename h1{
+	color: #0d47a1;
+	font-size: 40px	;
+	font-family: 'Cormorant Upright',serif ;
+	margin-top: 0;
+	
+	
+
+}
+
+
+

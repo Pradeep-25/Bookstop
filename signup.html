@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Sign-Up/Login form</title>
+<link href= "https://fonts.googleapis.com/css?family=Verdana" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+<link  rel="stylesheet" href="logincss.css" type="text/css">
+    
+<script>
+	
+function validateform() {
+var fn=document.forms["sign"]["firstname"].value;
+var ln=document.forms["sign"]["lastname"].value;
+var em=document.forms["sign"]["email"].value;
+var psw1=document.forms["sign"]["spwd"].value;
+var psw2=document.forms["sign"]["cpwd"].value;
+
+if( fn=="" || ln=="" || em=="" || psw1.length<1 || psw2.length<1)
+{
+	alert("All fields are mandatory");
+	return false;
+}
+    if (ValidateEmail(em)){
+  if(passid_validation(psw1)){
+    if(passid_validation2(psw1,psw2))
+
+return false;
+
+}}
+
+function passid_validation(psw1)
+{
+
+if(psw1.length<8 ){
+alert("Password should contain alteast 8 characters");
+return false;
+}
+return true;
+}
+function passid_validation2(psw1,psw2)
+{
+  if(psw1!=psw2)
+  {
+  alert("Confirm Password does not match");
+  return false;
+  }
+
+return true;
+}
+
+    function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+return false;
+
+}
+}
+   
+
+    }
+</script>
+</head>
+
+<body>
+<div class="bg-image"></div>
+<div class ="form">
+ <ul class ="tab-group">
+
+ <div class="tab-content">
+ 
+  <h1>Sign Up for Free!</h1>
+  <form action="signup.php" method= "post" onsubmit="return validateform()" name="sign" >
+   
+   <div class= "top-row">
+      </div>
+    <div classs="field-wrap">
+	
+	<input type="text" placeholder="First Name" name="firstname">
+	</div>
+   
+   
+   <div class="field-wrap">
+   
+
+	<input type="text"   placeholder="Last Name" name="lastname">
+	</div>
+   
+   <div class="field-wrap">
+   <input type="text"   placeholder="Email Address " name="email"><!--<span class= "req">*</span>-->
+	
+	
+	</div>
+	<div class="field-wrap">
+   
+	<input type="Password"   placeholder="Set Password" name="spwd">
+	</div>
+	<div class="field-wrap">
+   
+	<input type="Password"   placeholder="Confirm Password" name="cpwd">
+	</div>
+	<input type="submit" value="Get Started"  class="button button-block">
+	</form>
+     </div>
+    </ul>
+    </div>
+    
+	
+	
+	
+	
+   
+</body>
+</html>

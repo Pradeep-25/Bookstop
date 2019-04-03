@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>LogIn</title>
+<link href= "https://fonts.googleapis.com/css?family=Verdana" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+<link  rel="stylesheet" href="logincss.css" type="text/css">
+
+<script>
+	
+function validateform() {
+var em=document.forms["log"]["email"].value;
+var pas=document.forms["log"]["pwd"].value;
+if(em=="" || pas.length<1)
+{
+	alert("All fields are mandatory");
+	return false;
+}
+}
+</script>
+
+</head>
+<body>
+
+
+ <div id="login">
+ <div class ="form">
+
+ <div class="tab-content">
+ 
+    <h1>Welcome Back!</h1>
+     <form action="" method="post" name="log"  onsubmit="return validateform()">
+	 <div class="field-wrap">
+	 <input type="email" placeholder="Email Address" name="email"><br>
+	  
+	  
+	</div>
+	<div class="field-wrap">
+      <input type="Password" placeholder="Password" name="pwd"><br>
+	  
+	  
+	</div>
+	<p class="forgot"><a href="#">Forgot Password?</a></p><br>
+	<button class=" button button-block" type="submit">Log In</button>
+	</form>
+  </div>
+ </div>
+</div>
+</body>
+</html>

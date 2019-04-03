@@ -1,0 +1,26 @@
+body{
+    background-color: #efe8e1;
+}
+h1{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+h5{
+    font-family: 'Oswald', sans-serif;
+    
+}
+button{
+    background-color: black;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#search{
+    width:40%;
+    height:10px;
+    margin:auto;
+    margin-top: 20px;
+    padding:15px;
+}
