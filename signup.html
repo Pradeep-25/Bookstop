@@ -20,7 +20,7 @@ if( fn=="" || ln=="" || em=="" || psw1.length<1 || psw2.length<1)
 	alert("All fields are mandatory");
 	return false;
 }
-    if (ValidateEmail(em)){
+    if (!ValidateEmail(em)){
   if(passid_validation(psw1)){
     if(passid_validation2(psw1,psw2))
 
@@ -105,7 +105,7 @@ return false;
    
 	<input type="Password"   placeholder="Confirm Password" name="cpwd">
 	</div>
-	<input type="submit" value="Get Started"  class="button button-block">
+	<input type="submit" name="register" value="Get Started"  class="button button-block">
 	</form>
      </div>
     </ul>
