@@ -113,7 +113,7 @@ label.highlight{
 	margin-top:-10px;
 }
 
-input, textarea{
+.fields, textarea{
 	font-size:22px;
 	display:block;
 	width: 100%;

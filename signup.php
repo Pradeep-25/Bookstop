@@ -10,7 +10,7 @@ $insert_row = $mysqli->query($query);
 if($insert_row)	{
 		 	
 			
-			header("location:login.html");
+			header("location:log-in.php");
 			
 		}
 else		{

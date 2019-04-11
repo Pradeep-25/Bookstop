@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("Books1.jpg");
+
+  text-align: center;
+  color: white;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-family: comic sans ms;
+  
+  font-size: 50px;
+}
+@keyframes mymove {
+  50% {font-size: 40px;}
+}
+h2{	
+	color: white;
+	text align: center;
+	font-family: comic sans ms;
+	font-size: 40px;
+}
+p{	
+	color: white;
+	text align: center;
+	font-family: comic sans ms;
+	font-size: 25px;
+}
+</style>
+</head>
+<body>
+<h1 align="center">WELCOME TO OUR COMMUNITY</h1><hr>
+<h2>Enter the Book Details:</h2>
+<form name="lend" action="Lend.php" method="post">
+<p>Your Email Address: <input type="email" name="em"></p>
+<p>Book Name: <input type="text" name="bname"></p>
+<p>Author: <input type="text" name="author"></p>
+<p>Genre: <select name="genre">
+			<option value="Romance">Romance</option>
+			<option value="Fiction">Fiction</option>
+			<option value="Thriller">Thriller</option>
+			<option value="Mythology">Mythology</option>
+			<option value="Philosophy">Philosophy</option>
+			</select></p>
+<p>No. Of Copies: <input type="number" name="no_of_copies"></p>
+<input type="submit" name="done" value="Done"><br>
+</form>
+</body>
+</html>

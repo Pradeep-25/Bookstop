@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+
 <html>
 <head>
 <title>LogIn</title>
@@ -31,20 +31,33 @@ if(em=="" || pas.length<1)
     <h1>Welcome Back!</h1>
      <form action="login.php" method="post" name="log"  onsubmit="return validateform()">
 	 <div class="field-wrap">
-	 <input type="email" placeholder="Email Address" name="email"><br>
+	 <input type="email" class="fields" placeholder="Email Address" name="email" id="email"><br>
 	  
 	  
 	</div>
 	<div class="field-wrap">
-      <input type="Password" placeholder="Password" name="pwd"><br>
+      <input type="Password" class="fields" placeholder="Password" name="pwd"><br>
 	  
 	  
 	</div>
-	<p class="forgot"><a href="#">Forgot Password?</a></p><br>
-	<button class=" button button-block" type="submit">Log In</button>
+	<input type="checkbox" name="remember"  value="1"> Remember me<br><br>
+	<button class=" button button-block" type="submit" name="submit">Log In</button>
 	</form>
   </div>
  </div>
 </div>
+    <?php
+    error_reporting(0);
+    if($_COOKIE['email']){
+	$em=$_COOKIE['email'];
+   
+	echo "<script >
+		document.getElementById('email').value='$em';
+        
+	</script>";
+    }
+
+?>
+    
 </body>
 </html>
