@@ -104,7 +104,7 @@ if ($result->num_rows > 0) {
     }
     echo "</table>";
 	echo "<br>";
-	echo "<input type='submit' name='go' value='Go' style='height:30px;width:60px;border-radius:12px'>";
+	echo "<a href='Welcome.html'><input type='submit' onsubmit='return valid()' name='go' value='Go' style='height:30px;width:60px;border-radius:12px'></a>";
 } else {
     echo "0 results";
 }

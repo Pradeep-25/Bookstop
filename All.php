@@ -70,6 +70,24 @@ p{
   color: white;
 }
 </style>
+    
+    <script>
+    function valid()
+        {
+            var x=document.getElementById("go").value;
+            if(x=="")
+                {
+                    alert("Select value first!");
+                    return false;
+                }
+            else
+                return true;
+        }
+    
+    
+    </script>
+    
+    
 </head>
 <body>
 <h1 align="center">WELCOME TO BOOK STOP</h1><hr>
@@ -100,11 +118,11 @@ if ($result->num_rows > 0) {
     echo "<table><tr><th>BOOK NAME</th><th>AUTHOR</th><th>GENRE</th><th>SELECT</th></tr>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["Name"]. "</td><td>" . $row["Author"]. "</td><td>" . $row["Genre"]. "</td><td><input type='radio' name='go' value='Go'></td></tr>";
+        echo "<tr><td>" . $row["Name"]. "</td><td>" . $row["Author"]. "</td><td>" . $row["Genre"]. "</td><td><input type='radio' id='go' name='go' value='Go'></td></tr>";
     }
     echo "</table>";
 	echo "<br>";
-	echo "<input type='submit' name='go' value='Go' style='height:30px;width:60px;border-radius:12px'>";
+	echo "<a href='Welcome.html'><input type='submit' onsubmit='return valid()' name='go' value='Go' style='height:30px;width:60px;border-radius:12px'></a>";
 } else {
     echo "0 results";
 }

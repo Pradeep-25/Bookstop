@@ -40,7 +40,8 @@ if(em=="" || pas.length<1)
 	  
 	  
 	</div>
-	<input type="checkbox" name="remember"  value="1"> Remember me<br><br>
+	<input type="checkbox" name="remember"  value="1"> Remember me <br><br>
+         
 	<button class=" button button-block" type="submit" name="submit">Log In</button>
 	</form>
   </div>
@@ -48,12 +49,12 @@ if(em=="" || pas.length<1)
 </div>
     <?php
     error_reporting(0);
-    if($_COOKIE['email']){
+  if($_COOKIE['email'] ){    
 	$em=$_COOKIE['email'];
+    
    
 	echo "<script >
-		document.getElementById('email').value='$em';
-        
+		document.getElementById('email').value='$em';     
 	</script>";
     }
 

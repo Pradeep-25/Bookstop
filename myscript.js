@@ -30,18 +30,7 @@ function bookSearch(){
             results.innerHTML +='<br><a href='+data.items[i].volumeInfo.infoLink+'><button id="imagebutton" >Read More</button></a>';
             
             
-           // results.innerHTML += '<img class="aligning card z-depth-5" id="dynamic"><br><a href=' +response.items[i].volumeInfo.infoLink  +'><button id="imagebutton" class="btn red aligning">Read More</button></a>');
-            
-            //url=response.items[i].volumeInfo.imageLinks.thumbnail;
-            
-           //title=$('<h5 class="center-align black-text"> '+data.items[i].volumeInfo.title + '</h5>');
-            
-            //author=$('<h5 class="center-align black-text"> '+data.items[i].volumeInfo.authors + '</h5>');
-            
-            //title.appendTo("#result");
-            //author.appendTo("#result");
-            
-            //img=$('<img class="aligning card z-depth-5"  id="dynamic" ><br><a href=' +response.items[i].volumeInfo.infoLink + )
+           
         }
     },
            type: 'GET'

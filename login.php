@@ -21,6 +21,7 @@
         
         if(isset($_POST['remember'])){
         setcookie('email',$email,time()+60*60*7);
+        
           
         } 
         session_start();
@@ -35,6 +36,6 @@
         
         echo '<body style="background-color:#efe8e1">';
         echo "<h1 ><p >Invalid username/password</p></h1>
-        <a href='login.html'>Try again</a>";
+        <a href='log-in.php'>Try again</a>";
     }
 ?>

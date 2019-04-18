@@ -20,19 +20,27 @@ if( fn=="" || ln=="" || em=="" || psw1.length<1 || psw2.length<1)
 	alert("All fields are mandatory");
 	return false;
 }
-    if (!ValidateEmail(em)){
-  if(passid_validation(psw1)){
-    if(passid_validation2(psw1,psw2))
+ 
+    if(!ValidateEmail(em))
+    	return false;
+    
+    if(!passid_validation(psw1))
+        return false;
+    
+    if(!passid_validation2(psw1,psw2))
+        return false;
 
-return false;
-
-}}
-
+    return true;
+    
+    
+    
+    
+    
 function passid_validation(psw1)
 {
 
 if(psw1.length<5 ){
-alert("Password should contain alteast 8 characters");
+alert("Password should contain alteast 5 characters");
 return false;
 }
 return true;
@@ -82,28 +90,28 @@ return false;
       </div>
     <div classs="field-wrap">
 	
-	<input type="text" placeholder="First Name" name="firstname">
+	<input type="text" placeholder="First Name" class="fields" name="firstname">
 	</div>
    
    
    <div class="field-wrap">
    
 
-	<input type="text"   placeholder="Last Name" name="lastname">
+	<input type="text"   placeholder="Last Name" class="fields" name="lastname">
 	</div>
    
    <div class="field-wrap">
-   <input type="text"   placeholder="Email Address " name="email"><!--<span class= "req">*</span>-->
+   <input type="text"   placeholder="Email Address " class="fields" name="email"><!--<span class= "req">*</span>-->
 	
 	
 	</div>
 	<div class="field-wrap">
    
-	<input type="Password"   placeholder="Set Password" name="spwd">
+	<input type="Password"   placeholder="Set Password" class="fields" name="spwd">
 	</div>
 	<div class="field-wrap">
    
-	<input type="Password"   placeholder="Confirm Password" name="cpwd">
+	<input type="Password"   placeholder="Confirm Password" class="fields" name="cpwd"><br>
 	</div>
 	<input type="submit" name="register" value="Get Started"  class="button button-block">
 	</form>
